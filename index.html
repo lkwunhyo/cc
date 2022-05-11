@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloudcase Staff Onboarding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="register-card">
+        <aside class="register-aside">
+          <div class="logo"><span>Cloudcase</span></div>
+          <p class="aside-description">
+            A few details away from creating your profile
+          </p>
+          <div class="aside-image-container">Placeholder Image</div>
+        </aside>
+        <div class="register-content">
+          <h1>Register</h1>
+
+          <h2>Manage your finances efficiently</h2>
+          <p>
+            Let's get you all set up so that you can verify your account and
+            begin setting up your profile
+          </p>
+
+          <div class="form-container">
+            <div class="input-container">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" />
+            </div>
+            <div class="input-container">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" />
+            </div>
+            <div class="input-container">
+              <label for="phoneNumber">Phone number</label>
+              <input type="text" id="phoneNumber" name="phoneNumber" />
+            </div>
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" />
+            </div>
+            <div class="input-container">
+              <label for="salary">Annual salary (&#162;)</label>
+              <input type="text" id="salary" name="salary" />
+            </div>
+            <div class="input-container">
+              <label for="super">Super contribution (%)</label>
+              <input type="text" id="super" name="super" />
+            </div>
+            <button
+              class="btn-submit"
+              onclick="alert(`Annual tax: ${calculateTaxes.calculateTax(+document.getElementById('salary').value)}&#162; \nSuper: ${calculateTaxes.calculateSuper(+document.getElementById('salary').value, +document.getElementById('super').value / 100)}&#162;`)"
+            >
+              Submit
+            </button>
+          </div>
+
+          <p class="login">Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
