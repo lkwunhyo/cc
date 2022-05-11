@@ -52,7 +52,7 @@
               <input type="text" id="email" name="email" />
             </div>
             <div class="input-container">
-              <label for="salary">Annual salary (&#162;)</label>
+              <label for="salary">Annual salary ($)</label>
               <input type="text" id="salary" name="salary" />
             </div>
             <div class="input-container">
@@ -61,7 +61,7 @@
             </div>
             <button
               class="btn-submit"
-              onclick="alert(`Annual tax: ${calculateTaxes.calculateTax(+document.getElementById('salary').value)}&#162; \nSuper: ${calculateTaxes.calculateSuper(+document.getElementById('salary').value, +document.getElementById('super').value / 100)}&#162;`)"
+              onclick="alert(`Annual tax: $${calculateTaxes.calculateTax(+document.getElementById('salary').value * 100) / 100}; \nSuper: $${calculateTaxes.calculateSuper(+document.getElementById('salary').value * 100, +document.getElementById('super').value / 100) / 100}`)"
             >
               Submit
             </button>
