@@ -18,6 +18,7 @@ const calculateTaxes = (function () {
   }
 
   // params 'salary' => in cents
+  // params 'percentage' => in decimal
   function calculateSuper(salary, percentage) {
     return (salary - calculateTax(salary)) * percentage;
   }
@@ -80,17 +81,17 @@ test.it("Should return correct", function () {
 });
 
 test.it("Should return correct", function () {
-  test.assert(calculateTaxes.calculateSuper(1820000) === 182000);
+  test.assert(calculateTaxes.calculateSuper(1820000, 0.1) === 182000);
 });
 test.it("Should return correct", function () {
-  test.assert(calculateTaxes.calculateSuper(3700000) === 334280);
+  test.assert(calculateTaxes.calculateSuper(3700000, 0.1) === 334280);
 });
 test.it("Should return correct", function () {
-  test.assert(calculateTaxes.calculateSuper(9000000) === 692030);
+  test.assert(calculateTaxes.calculateSuper(9000000, 0.1) === 692030);
 });
 test.it("Should return correct", function () {
-  test.assert(calculateTaxes.calculateSuper(18000000) === 1259030);
+  test.assert(calculateTaxes.calculateSuper(18000000, 0.1) === 1259030);
 });
 test.it("Should return correct", function () {
-  test.assert(calculateTaxes.calculateSuper(36000000) === 2249030);
+  test.assert(calculateTaxes.calculateSuper(36000000, 0.1) === 2249030);
 });
